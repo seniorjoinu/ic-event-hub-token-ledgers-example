@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "token": {
+      "build": "./token/build.sh",
+      "candid": "./token/can.did",
+      "wasm": "./token/target/wasm32-unknown-unknown/release/token-opt.wasm",
+      "type": "custom"
+    },
+    "ledger-1": {
+      "build": "./ledger-1/build.sh",
+      "candid": "./ledger-1/can.did",
+      "wasm": "./ledger-1/target/wasm32-unknown-unknown/release/ledger-1-opt.wasm",
+      "type": "custom"
+    },
+    "ledger-2": {
+      "build": "./ledger-2/build.sh",
+      "candid": "./ledger-2/can.did",
+      "wasm": "./ledger-2/target/wasm32-unknown-unknown/release/ledger-2-opt.wasm",
+      "type": "custom"
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

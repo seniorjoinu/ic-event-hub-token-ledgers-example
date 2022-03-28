@@ -1,0 +1,28 @@
+type Entry = variant {
+    Mint : MintEvent;
+    Transfer : TransferEvent;
+    Burn : BurnEvent;
+};
+
+type MintEvent = record {
+    to : principal;
+    amount : nat64;
+    timestamp : nat64;
+};
+
+type TransferEvent = record {
+    from : principal;
+    to : principal;
+    amount : nat64;
+    timestamp : nat64;
+};
+
+type BurnEvent = record {
+    from : principal;
+    amount : nat64;
+    timestamp : nat64;
+};
+
+service : (principal) -> {
+    "get_events" : () -> (vec Entry) query;
+}

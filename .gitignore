@@ -1,0 +1,4 @@
+.idea
+**/*/.dfx
+**/*/target
+**/*/Cargo.lock

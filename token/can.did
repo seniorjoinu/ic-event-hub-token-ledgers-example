@@ -1,0 +1,14 @@
+type TokenInfo = record {
+    name : text;
+    symbol : text;
+    decimals : nat8;
+};
+
+service : (principal, TokenInfo) -> {
+    "mint" : (principal, nat64) -> ();
+    "transfer" : (principal, nat64) -> ();
+    "burn" : (nat64) -> ();
+    "get_balance_of" : (principal) -> (nat64) query;
+    "get_total_supply" : () -> (nat64) query;
+    "get_info" : () -> (TokenInfo) query;
+}
